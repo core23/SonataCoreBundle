@@ -11,18 +11,12 @@
 
 namespace Sonata\CoreBundle\Model;
 
-use Sonata\DatagridBundle\Pager\PagerInterface;
+use Sonata\DatagridBundle\Pager\PageableInterface;
 
 /**
  * @author Raphaël Benitte <benitteraphael@gmail.com>
+ *
+ * @deprecated since 3.x, to be removed in 4.0. Use Sonata\DatagridBundle\Pager\PageableInterface instead.
  */
-interface PageableManagerInterface
-{
-    /**
-     * @param int $page
-     * @param int $limit
-     *
-     * @return PagerInterface
-     */
-    public function getPager(array $criteria, $page, $limit = 10, array $sort = []);
+interface PageableManagerInterface extends PageableInterface {
 }
